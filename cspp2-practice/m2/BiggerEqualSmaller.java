@@ -21,15 +21,15 @@ public final class BiggerEqualSmaller {
         int a = scan.nextInt();
         int b = scan.nextInt();
         int c = scan.nextInt();
-        
-        if(a > b)
+
+        if (a > b) {
             System.out.println("Bigger");
-        else if(a == b)
+        } else if (a == b) {
             System.out.println("Equal");
-        else if (a < c)
+        } else if (a < c) {
             System.out.println("Smaller");
-        
-        
+        }
+
     }
 
 }

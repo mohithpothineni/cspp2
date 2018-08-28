@@ -1,5 +1,6 @@
 
 
+
 import java.util.Scanner;
 /**
 *Solution for finding power by recursion.

@@ -33,7 +33,7 @@ public final class Solution {
     @return result powered
     */
     public static long power(final long a, final int e) {
-        if (e == 0 || e == 1) {
+        if (e == 0) {
             return 1;
         }
         return a * power(a, e - 1);

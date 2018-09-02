@@ -22,19 +22,20 @@ public final class Solution {
     /**
      * Determines if prime.
      *
-     * @param      n     { parameter_description }
+     * @param      n number to check if it is a prime or not.
      *
      * @return     True if prime, False otherwise.
      */
     static boolean isPrime(final int n) {
-        int count = 0;
+        //int count = 0;
         for (int i = 2; i <= n / i; i++) {
             if (n % i == 0) {
-                count++;
-                break;
+                //count++;
+                return false;
+                //break;
             }
         }
-        return count == 0;
+        return true;
     }
 
 

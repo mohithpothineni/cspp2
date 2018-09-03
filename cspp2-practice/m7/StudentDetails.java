@@ -21,6 +21,7 @@ public final class StudentDetails {
      * @param      args  The arguments
      */
     public static void main(final String[] args) {
+        //for clearing the magic number error
         final double s1sub1 = 7.5;
         final double s1sub2 = 7.0;
         final double s1sub3 = 8.0;

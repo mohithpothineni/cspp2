@@ -5,7 +5,7 @@ import java.util.Arrays;
 
 /**
  * Class for set.
- * @author :
+ * @author :fasak.
  */
 class Set {
     //your code goes here...
@@ -163,24 +163,16 @@ class Set {
      * @return     cartesian product of two sets.
      */
     int[][] cartesianProduct(final Set obj) {
-        if (this.array.length == 0 || obj.array.length == 0) {
-            return null;
-        }
-
         int estimatedrows = this.size() * obj.size();
-
+        int n = 0;
         int[][] result = new int[estimatedrows][2];
-
-
-        for (int n = 0; n < this.size(); n++) {
-            int k = 0;
-            for (int i = 0; i < estimatedrows; i++) {
-                result[i][0] = this.array[n];
-                result[i][1] = obj.array[k++];
-                if (k == obj.size()) {
-                    k = 0;
-                    n++;
-                }
+        int k = 0;
+        for (int i = 0; i < estimatedrows; i++) {
+            result[i][0] = this.array[n];
+            result[i][1] = obj.array[k++];
+            if (k == obj.size()) {
+                k = 0;
+                n++;
             }
         }
 

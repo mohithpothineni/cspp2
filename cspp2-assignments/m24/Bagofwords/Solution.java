@@ -113,7 +113,7 @@ class Solution {
         File folder = new File(inputfolder);
         File[] listOfFiles = folder.listFiles();
 
-            
+
 
         String[] docs = new String[listOfFiles.length];
         int i = 0;
@@ -132,21 +132,37 @@ class Solution {
 
         System.out.println(tmp_header);
 
+        double maxValue = 0;
+        String resultt = "";
+
+
         int indxx = 0;
+        int ii = 0;
         for (String inp : docs) {
+            
             String[] s1 = inp.split(" ");
 
             System.out.print(listOfFiles[indxx++].getName() + "\t");
+            int jj = 0;
             for (String j : docs) {
                 String[] s2 = j.split(" ");
                 BagOfWords bw = new BagOfWords(s1, s2);
 
                 double result = bw.computeFrequency();
+                if (maxValue < result && ii != jj) {
+                        maxValue = result;
+                        resultt = "Maximum similarity is between "
+                                 + listOfFiles[ii].getName() + " and "
+                                 + listOfFiles[jj].getName();
+                    }
                 System.out.print(Math.round(result * 100));
                 System.out.print(" " + "\t");
+                jj++;
             }
             System.out.println();
+            ii++;
         }
+        System.out.println(resultt);
     }
 }
 

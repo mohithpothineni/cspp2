@@ -93,6 +93,7 @@ public final class Solution {
         for (int i = 0; i < length - 1; i++) {
             System.out.print("\t" + fileList[i].getName());
         }
+        System.out.println();
         
         for (int i = 0; i < length; i++) {
             System.out.print(fileList[i].getName() + "\t");

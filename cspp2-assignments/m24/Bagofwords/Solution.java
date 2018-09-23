@@ -101,17 +101,19 @@ class Solution {
 
 
         Scanner scan = new Scanner(System.in);
+        String inputfolder;
 
-
-        String inputfolder = scan.nextLine();
-
-        File folder = new File(inputfolder);
-        File[] listOfFiles = folder.listFiles();
-
-        if (listOfFiles.length == 0) {
+        try {
+            inputfolder = scan.nextLine();
+        } catch (Exception e) {
             System.out.println("empty directory");
             return;
         }
+        
+        File folder = new File(inputfolder);
+        File[] listOfFiles = folder.listFiles();
+
+            
 
         String[] docs = new String[listOfFiles.length];
         int i = 0;
@@ -145,9 +147,6 @@ class Solution {
             }
             System.out.println();
         }
-
-
-        return;
     }
 }
 

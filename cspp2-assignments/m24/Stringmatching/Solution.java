@@ -53,7 +53,13 @@ public final class Solution {
     public static void main(final String[] args) {
 
         Scanner scan = new Scanner(System.in);
-        String input = scan.nextLine();
+        String input = null;
+        try {
+            input = scan.nextLine();    
+        } catch (Exception e) {
+            System.out.println("Empty Directory");
+            return;
+        }
         File files = new File(input);
         StringMatching obj = new StringMatching();
         File[] fileList = files.listFiles();
@@ -87,11 +93,7 @@ public final class Solution {
         for (int i = 0; i < length - 1; i++) {
             System.out.print("\t" + fileList[i].getName());
         }
-        try {
-            System.out.println("\t" + fileList[length - 1].getName());
-        } catch (Exception e) {
-            System.out.println("Empty Directory");
-        }
+        
         for (int i = 0; i < length; i++) {
             System.out.print(fileList[i].getName() + "\t");
             for (int j = 0; j < length; j++) {
